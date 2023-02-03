@@ -38,3 +38,14 @@ def webpage_modelform(request):
             return HttpResponse('Webpage is inserted by using Model Forms')
     return render(request,'webpage_modelform.html',d)
 
+
+def access_modelform(request):
+    AMFO=ModelaccessForm()
+    d={'form':AMFO}
+
+    if request.method=='POST':
+        FD=ModelaccessForm(request.POST)
+        if FD.is_valid():
+            FD.save()
+            return HttpResponse('access is inserted by using Model Forms')
+    return render(request,'access_modelform.html',d)

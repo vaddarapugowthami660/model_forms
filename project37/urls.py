@@ -22,4 +22,5 @@ urlpatterns = [
     path('insert_topic/',insert_topic,name='insert_topic'),
     path('topic_modelform/',topic_modelform,name='topic_modelform'),
     path('webpage_modelform/',webpage_modelform,name='webpage_modelform'),
+    path('access_modelform/',access_modelform,name='access_modelform'),
 ]
